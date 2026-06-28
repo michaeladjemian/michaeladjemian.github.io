@@ -1,94 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Media — Michael K. Adjemian</title>
-  <meta name="description" content="Michael K. Adjemian speaks with journalists on the economics of commodity markets, food prices, and agricultural and trade policy.">
+:root {
+  --ink: #14202b;
+  --slate: #5a6b78;
+  --paper: #fbfcfb;
+  --line: #e2e8e4;
+  --blue: #1f5673;      /* deep teal-blue, primary */
+  --green: #3f7d5c;     /* field green, secondary */
+  --green-soft: #eef4ef;
+  --blue-soft: #eaf1f4;
+  --maxw: 880px;
+}
 
-  <meta property="og:title" content="Michael K. Adjemian — Media">
-  <meta property="og:description" content="Available for interviews on commodity markets, food prices, and agricultural and trade policy.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://michaeladjemian.github.io/media.html">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Michael K. Adjemian — Media">
-  <meta name="twitter:description" content="Available for interviews on commodity markets, food prices, and agricultural and trade policy.">
+* { box-sizing: border-box; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+html { scroll-behavior: smooth; }
 
-<header class="site">
-  <div class="nav">
-    <a class="brand" href="index.html">Michael K. Adjemian<span class="dot">.</span></a>
-    <nav>
-      <a href="index.html#publications">Selected Publications</a>
-      <a href="index.html#working">Working Papers</a>
-      <a href="media.html">Media</a>
-      <a href="consulting.html">Consulting</a>
-      <a href="assets/files/ADJEMIAN_Michael_CV.pdf">CV</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+body {
+  margin: 0;
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 18px;
+}
 
-<main class="wrap">
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 
-  <section style="border-top:none; padding-top:3rem;">
-    <p class="eyebrow">For journalists</p>
-    <h2>Media</h2>
-    <p style="color:var(--slate); max-width:60ch;">
-      I regularly speak with reporters on the economics of commodity markets, food prices, and
-      agricultural and trade policy. Popular topics include the impact of supply shocks, food price inflation, government crop reports, tariffs,
-      and transportation costs. I'm glad to provide background, context, or on-the-record commentary, and I
-      can often respond on deadline.
-    </p>
-    <p style="color:var(--slate);">
-      For interview requests, contact me at
-      <a href="mailto:michael.adjemian@uga.edu" style="color:var(--blue);">michael.adjemian@uga.edu</a>.
-    </p>
-  </section>
+/* ---- nav ---- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,252,251,0.92);
+  backdrop-filter: blur(6px);
+  position: sticky; top: 0; z-index: 10;
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: var(--maxw); margin: 0 auto; padding: 0.9rem 1.5rem;
+}
+.brand {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em;
+  color: var(--ink); text-decoration: none;
+}
+.brand .dot { color: var(--green); }
+.nav nav a {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--slate); text-decoration: none;
+  margin-left: 1.4rem;
+}
+.nav nav a:hover { color: var(--blue); }
 
-  <section>
-    <p class="eyebrow">Coverage</p>
-    <h2>Recent Published Coverage</h2>
-    <p style="color:var(--slate); margin-bottom:1.2rem;">
-      My commentary and research have been featured by outlets including the New York Times, the
-      Wall Street Journal, Bloomberg, the Atlanta Journal-Constitution, and NBC News. A few recent
-      examples:
-    </p>
+/* ---- hero ---- */
+.hero { padding: 3.5rem 0 2.5rem; display: flex; gap: 2.2rem; align-items: flex-start; }
+.hero img {
+  width: 200px; height: 200px; border-radius: 12px; object-fit: cover;
+  border: 1px solid var(--line); flex-shrink: 0;
+}
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 2rem; line-height: 1.15; margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+.hero .role { color: var(--green); font-weight: 600; font-family: "Inter", sans-serif; font-size: 1rem; }
+.hero p.bio { margin: 0.8rem 0 0; color: var(--slate); }
+.links { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.links a {
+  font-family: "Inter", sans-serif; font-size: 0.85rem; font-weight: 500;
+  text-decoration: none; color: var(--blue);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 0.3rem 0.85rem; background: #fff;
+}
+.links a:hover { border-color: var(--blue); background: var(--blue-soft); }
 
-    <div class="pub">
-      <div>
-        <div class="title"><a href="https://www.nbcnews.com/business/consumer/diesel-prices-iran-war-farmers-trump-rcna263902" style="color:var(--ink); text-decoration:none;">&ldquo;A direct hit for consumer prices&rdquo;: Diesel surges past $5 a gallon</a></div>
-        <div class="venue">NBC News &middot; 2026</div>
-      </div>
-    </div>
+/* ---- sections ---- */
+section { padding: 2.2rem 0; border-top: 1px solid var(--line); }
+.eyebrow {
+  font-family: "Inter", sans-serif; text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600;
+  color: var(--green); margin: 0 0 0.4rem;
+}
+section h2 {
+  font-family: "Inter", sans-serif; font-size: 1.4rem; margin: 0 0 1.2rem;
+  letter-spacing: -0.01em;
+}
 
-    <div class="pub">
-      <div>
-        <div class="title"><a href="https://www.wsj.com/economy/truckers-are-the-first-victims-of-the-diesel-price-shock-52ff802d" style="color:var(--ink); text-decoration:none;">Truckers Are the First Victims of the Diesel-Price Shock</a></div>
-        <div class="venue">The Wall Street Journal &middot; 2026</div>
-      </div>
-    </div>
+/* ---- publications: grouped by year with a connecting rail ---- */
+.pubgroup { display: flex; gap: 1.4rem; }
+.pubgroup .year {
+  font-family: "Inter", sans-serif; font-weight: 700; color: var(--blue);
+  font-size: 0.95rem; min-width: 3rem; text-align: right;
+  position: relative; padding-top: 1rem;
+}
+/* the vertical rail sits just right of the year column */
+.pubgroup .railcol {
+  position: relative; width: 1px; background: var(--line); flex-shrink: 0;
+}
+.pubgroup .railcol::before {
+  content: ""; position: absolute; left: -4px; top: 1.15rem;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--green); border: 2px solid var(--paper);
+}
+.pubgroup .items { flex: 1; }
 
-    <div class="pub">
-      <div>
-        <div class="title"><a href="https://www.wired.com/sponsored/story/refinitiv-data-future-of-commodities/" style="color:var(--ink); text-decoration:none;">The Future of Commodities</a></div>
-        <div class="venue">Wired</div>
-      </div>
-    </div>
-  </section>
+/* working-papers status label (shown once per group, like a year) */
+.wp-label {
+  font-size: 0.72rem !important; letter-spacing: 0.04em; text-transform: uppercase;
+  line-height: 1.3; text-align: right;
+}
+.pubgroup .year.wp-status {
+  font-size: 0.7rem; line-height: 1.25; text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pub { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.pub:last-child { border-bottom: none; }
+.pub .title { font-weight: 600; }
+.pub .authors { font-size: 0.95rem; }
+.pub .venue { color: var(--slate); font-style: italic; font-size: 0.95rem; }
+.pub .pub-links { margin-top: 0.2rem; }
+.pub .pub-links a {
+  font-family: "Inter", sans-serif; font-size: 0.78rem; font-weight: 600;
+  text-decoration: none; color: var(--green); margin-right: 0.8rem;
+}
+.pub .pub-links a:hover { text-decoration: underline; }
+.pub .pub-links a.data { color: var(--blue); }
 
-</main>
+/* ---- expandable abstract ---- */
+.pub .abstract-toggle {
+  font-family: "Inter", sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--slate); cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  background: none; border: none; padding: 0; margin-top: 0.1rem;
+}
+.pub .abstract-toggle:hover { color: var(--blue); }
+.pub .abstract-toggle .chev {
+  display: inline-block; transition: transform 0.25s ease;
+  width: 0; height: 0; margin-right: 0.1rem;
+  border-top: 4px solid transparent; border-bottom: 4px solid transparent;
+  border-left: 5px solid currentColor;
+}
+.pub .abstract-wrap {
+  display: grid; grid-template-rows: 0fr; width: 100%;
+  transition: grid-template-rows 0.35s ease;
+}
+.pub .abstract-wrap > div { overflow: hidden; width: 100%; }
+.pub .abstract {
+  font-size: 0.92rem; color: var(--slate); line-height: 1.6;
+  padding-top: 0.6rem; width: 100%; max-width: none;
+  opacity: 0; transition: opacity 0.3s ease 0.05s;
+}
+/* open state — toggled by hover on desktop and by .is-open (tap) anywhere */
+.pub.is-open .abstract-wrap { grid-template-rows: 1fr; }
+.pub.is-open .abstract { opacity: 1; }
+.pub.is-open .abstract-toggle .chev { transform: rotate(90deg); }
 
-<footer class="site">
-  © <span id="yr"></span> Michael K. Adjemian · Built with GitHub Pages
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
-</footer>
+@media (hover: hover) and (pointer: fine) {
+  .pub.has-abstract:not(.js-controlled):hover .abstract-wrap { grid-template-rows: 1fr; }
+  .pub.has-abstract:not(.js-controlled):hover .abstract { opacity: 1; }
+  .pub.has-abstract:not(.js-controlled):hover .abstract-toggle .chev { transform: rotate(90deg); }
+}
 
-</body>
-</html>
+/* ---- expandable abstracts ---- */
+.abstract-toggle {
+  font-family: "Inter", sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--green); cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.2rem;
+}
+.abstract-toggle::after { content: "\25BE"; font-size: 0.7rem; transition: transform 0.2s; }
+.pub-abstract {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+  color: var(--slate); font-size: 0.92rem; line-height: 1.55;
+  border-left: 2px solid var(--green-soft);
+}
+.pub-abstract p { margin: 0; }
+/* open state: toggled by hover on desktop, or .is-open (tap) anywhere */
+.has-abstract:hover .pub-abstract,
+.has-abstract.is-open .pub-abstract {
+  max-height: 600px; margin-top: 0.6rem; padding: 0.1rem 0 0.1rem 0.9rem;
+}
+.has-abstract:hover .abstract-toggle::after,
+.has-abstract.is-open .abstract-toggle::after { transform: rotate(180deg); }
+/* on touch devices, hover is unreliable; rely on tap (.is-open) only */
+@media (hover: none) {
+  .has-abstract:hover .pub-abstract { max-height: 0; margin-top: 0; padding: 0; }
+  .has-abstract.is-open .pub-abstract { max-height: 600px; margin-top: 0.6rem; padding: 0.1rem 0 0.1rem 0.9rem; }
+}
+
+/* ---- projects ---- */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.card {
+  border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem;
+  background: #fff;
+}
+.card h3 { font-family: "Inter", sans-serif; font-size: 1.05rem; margin: 0 0 0.4rem; }
+.card p { margin: 0 0 0.7rem; color: var(--slate); font-size: 0.95rem; }
+.card .tag {
+  display: inline-block; font-family: "Inter", sans-serif; font-size: 0.72rem;
+  background: var(--green-soft); color: var(--green); border-radius: 4px;
+  padding: 0.1rem 0.5rem; margin-right: 0.3rem; font-weight: 600;
+}
+.card a.more {
+  font-family: "Inter", sans-serif; font-size: 0.82rem; font-weight: 600;
+  color: var(--blue); text-decoration: none;
+}
+
+/* ---- footer ---- */
+footer.site {
+  border-top: 1px solid var(--line); padding: 2rem 0 3rem;
+  font-family: "Inter", sans-serif; font-size: 0.82rem; color: var(--slate);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .hero { flex-direction: column; gap: 1.2rem; }
+  .grid { grid-template-columns: 1fr; }
+  .nav nav a { margin-left: 1rem; }
+  body { font-size: 17px; }
+}
