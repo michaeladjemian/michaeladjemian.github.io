@@ -101,6 +101,20 @@ section h2 {
   background: var(--green); border: 2px solid var(--paper);
 }
 .pubgroup .items { flex: 1; }
+
+/* working-papers rail: continuous line with a dot per entry */
+#working .pubgroup .railcol::before { content: none; }
+#working .pub { position: relative; padding-left: 1.4rem; }
+#working .pub::before {
+  content: ""; position: absolute; left: -5px; top: 1.35rem;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--green); border: 2px solid var(--paper);
+}
+#working .wp-tag {
+  font-family: "Inter", sans-serif; font-weight: 700; color: var(--blue);
+  font-size: 0.72rem; letter-spacing: 0.03em; text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
 .pub { padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .pub:last-child { border-bottom: none; }
 .pub .title { font-weight: 600; }
@@ -144,9 +158,9 @@ section h2 {
 .pub.is-open .abstract-toggle .chev { transform: rotate(90deg); }
 
 @media (hover: hover) and (pointer: fine) {
-  .pub.has-abstract:hover .abstract-wrap { grid-template-rows: 1fr; }
-  .pub.has-abstract:hover .abstract { opacity: 1; }
-  .pub.has-abstract:hover .abstract-toggle .chev { transform: rotate(90deg); }
+  .pub.has-abstract:not(.js-controlled):hover .abstract-wrap { grid-template-rows: 1fr; }
+  .pub.has-abstract:not(.js-controlled):hover .abstract { opacity: 1; }
+  .pub.has-abstract:not(.js-controlled):hover .abstract-toggle .chev { transform: rotate(90deg); }
 }
 
 /* ---- expandable abstracts ---- */
