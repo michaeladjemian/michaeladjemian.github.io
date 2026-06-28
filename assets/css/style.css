@@ -221,17 +221,17 @@ footer.site {
 /* ---- Affiliations logo strip ---- */
 .affiliations .logo-strip {
   list-style: none;
-  margin: 1.1rem 0 0;
+  margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 2.2rem 2.8rem;
+  gap: clamp(1rem, 4vw, 3rem);
 }
 .affiliations .logo-strip li { margin: 0; }
 .affiliations .logo-strip img {
-  height: 64px;
+  height: clamp(38px, 7vw, 64px);
   width: auto;
   object-fit: contain;
   filter: grayscale(100%);
@@ -241,8 +241,4 @@ footer.site {
 .affiliations .logo-strip img:hover {
   filter: grayscale(0%);
   opacity: 1;
-}
-@media (max-width: 600px) {
-  .affiliations .logo-strip { gap: 1.6rem 1.8rem; }
-  .affiliations .logo-strip img { height: 48px; }
 }
