@@ -217,3 +217,32 @@ footer.site {
   .nav nav a { margin-left: 1rem; }
   body { font-size: 17px; }
 }
+
+/* ---- Affiliations logo strip ---- */
+.affiliations .logo-strip {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem 2.8rem;
+}
+.affiliations .logo-strip li { margin: 0; }
+.affiliations .logo-strip img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+.affiliations .logo-strip img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .affiliations .logo-strip { gap: 1.6rem 1.8rem; }
+  .affiliations .logo-strip img { height: 48px; }
+}
