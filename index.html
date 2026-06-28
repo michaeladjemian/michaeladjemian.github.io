@@ -74,15 +74,17 @@
       <div class="year">2026</div>
       <div class="railcol"></div>
       <div class="items">
-        <div class="pub">
+        <div class="pub has-abstract">
           <div class="title">Export Bans and Commodity Price Volatility Expectations</div>
           <div class="authors">M.K. Adjemian, C. Petroff, and M.A. Robe</div>
           <div class="venue">Journal of International Money and Finance, 164 (103552)</div>
         <div class="pub-links">
           <a href="https://doi.org/10.1016/j.jimonfin.2026.103552">DOI</a>
         </div>
+          <button class="abstract-toggle" aria-expanded="false"><span class="chev"></span> Abstract</button>
+          <div class="abstract-wrap"><div><div class="abstract">We carry out the first high-frequency empirical analysis of commodity export bans' impact on world price dynamics. We construct a novel daily dataset of major restrictions on agricultural exports in 2002&ndash;2019 and use commodity option-implied volatilities as a proxy for price uncertainty. Wheat and corn implied volatilities are higher when a ban is first imposed and while it remains in effect, and the increase is statistically and economically significant. Accounting for political risk helps explain commodity price dynamics.</div></div></div>
         </div>
-        <div class="pub">
+        <div class="pub has-abstract">
           <div class="title">A Theory of Subsidy Harvesting in Livestock Price Insurance</div>
           <div class="authors">M.K. Adjemian and A.F. Ramsey</div>
           <div class="venue">In <span style="font-style:italic;">Risk and Risk Management in the Agricultural Economy</span>, eds. B. Goodwin and T. Deryugina. University of Chicago Press (forthcoming)</div>
@@ -90,6 +92,8 @@
           <a href="assets/files/Subsidy_Harvesting.pdf">PDF</a>
           <a href="https://www.nber.org/books-and-chapters/risk-and-risk-management-agricultural-economy">Book</a>
         </div>
+          <button class="abstract-toggle" aria-expanded="false"><span class="chev"></span> Abstract</button>
+          <div class="abstract-wrap"><div><div class="abstract">USDA designed the Livestock Risk Protection (LRP) program to help producers insure against declining prices for fed cattle, feeder cattle, and swine. Prices in derivatives markets determine program indemnities, making LRP policies similar to put options. Beginning in 2019, USDA made several changes to the program to encourage producer take-up, including increased premium subsidies. We introduce a theoretical model to show that subsidizing LRP premiums can invite producers to &ldquo;subsidy harvest,&rdquo; i.e. extract the government's premium subsidy by offsetting the policy in a derivatives market&mdash;potentially removing the downside protection the program was intended to provide. The subsidy harvest is a rent transfer and costlier than a direct payment because it requires administrative oversight and federally subsidized delivery through approved insurance providers. According to the model, the government's premium subsidy leads producers to favor LRP-oriented strategies over market options alone, while their choice to offset actual risk protection using options depends on individual risk tolerance, transaction costs, and margin costs. As a result, subsidizing livestock insurance may crowd out producers' trading of market options, unless it also invites subsidy harvesting.</div></div></div>
         </div>
       </div>
     </div>
@@ -398,6 +402,16 @@
 <footer class="site">
   © <span id="yr"></span> Michael K. Adjemian · Built with GitHub Pages
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    // Tap/click to toggle abstracts (works on touch where hover doesn't).
+    document.querySelectorAll('.pub.has-abstract .abstract-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var pub = btn.closest('.pub');
+        var open = pub.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  </script>
 </footer>
 
 </body>
