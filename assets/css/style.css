@@ -135,7 +135,7 @@ section h2 {
 .pub .abstract-wrap > div { overflow: hidden; }
 .pub .abstract {
   font-size: 0.92rem; color: var(--slate); line-height: 1.6;
-  padding-top: 0.6rem; max-width: 64ch;
+  padding-top: 0.6rem; max-width: 120ch;
   opacity: 0; transition: opacity 0.3s ease 0.05s;
 }
 /* open state — toggled by hover on desktop and by .is-open (tap) anywhere */
