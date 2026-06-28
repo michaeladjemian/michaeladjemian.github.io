@@ -88,7 +88,7 @@ section h2 {
 .pubgroup { display: flex; gap: 1.4rem; }
 .pubgroup .year {
   font-family: "Inter", sans-serif; font-weight: 700; color: var(--blue);
-  font-size: 0.95rem; min-width: 3rem; text-align: right;
+  font-size: 0.95rem; width: 5rem; min-width: 5rem; flex-shrink: 0; text-align: right;
   position: relative; padding-top: 1rem;
 }
 /* the vertical rail sits just right of the year column */
